@@ -1,22 +1,25 @@
-import setuptools
+#!/usr/bin/env python
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+import glob
 
-setuptools.setup(
-    name="example-pkg-YOUR-USERNAME-HERE", # Replace with your own username
-    version="0.0.1",
-    author="Example Author",
-    author_email="author@example.com",
-    description="A small example package",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
-    packages=setuptools.find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires='>=3.6',
-)
+from setuptools import setup
+
+scripts = glob.glob('bin/*')
+
+description = "Some script and jupyter notbook about the Brachistochrone problem"
+
+version="0.1"
+setup(name="Lesson",
+    version=version,
+    description=description,
+    url="https://github.com/Sylk1-9/Brachistochrone",
+    author="Sylvain Vanneste",
+    author_email="sylvain.vanneste@gmail.com",
+    packages=[],
+    package_dir = {'': 'py'},
+    package_data = {'': ['etc/']},
+    install_requires=['numpy','scipy','ipympl','ipykernel', 'jupyter',
+'jupyter_kernel_gateway',],
+    test_suite='SaclayMocks.test.test_cor',
+    scripts = scripts
+    )

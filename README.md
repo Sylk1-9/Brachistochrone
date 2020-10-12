@@ -1,6 +1,6 @@
 # Brachistochrone
 
-This project is about the Brachistochrone problem. It mainly consists in a Jupyter notebook in `codes/Lesson.ipynd`, the other file are material.
+This project is about the Brachistochrone problem. It mainly consists of  a course in the form of a Jupyter notebook, `codes/Lesson.ipynd`. The other files are materials and references.
 
 Requirements (`pip install []`) :
 
